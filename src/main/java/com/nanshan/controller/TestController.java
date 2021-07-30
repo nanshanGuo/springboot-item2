@@ -1,13 +1,25 @@
 package com.nanshan.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
 
 @RestController
 public class TestController {
 
-    @GetMapping("/hello")
+    @GetMapping("/get_hello")
     public String test(){
-        return "hello nanshan Spring!";
+        return "get_hello nanshan Spring!";
     }
+
+    @PostMapping("/post_hello")
+    public String testpost(){
+        return "post_hello nanshan Spring!";
+    }
+
+    @GetMapping("/get_hello/{userId}/{password}")
+    public String testPara(@PathVariable String userId,@PathVariable String password){
+        return "get_hello userId =" + userId + "  ;password = " + password;
+    }
+
 }
