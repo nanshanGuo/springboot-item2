@@ -22,4 +22,10 @@ public class TestController {
         return "get_hello userId =" + userId + "  ;password = " + password;
     }
 
+    @GetMapping("/get_hellopara")
+    public String testpara2(@RequestParam("a")String a, @RequestParam("b")String b){
+        return "get_hello userId =" + a + "  ;password = " + b;
+    }
+
+
 }
