@@ -9,6 +9,7 @@ public class TestController {
 
     @GetMapping("/get_hello")
     public String test(){
+        System.out.println("AOP■■■■■■■■■■■■■■■■■■■■■■■");
         return "get_hello nanshan Spring!";
     }
 
